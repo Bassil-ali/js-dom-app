@@ -11,20 +11,21 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+
     // add books
     const addForm = forms['add-book'];
     addForm.addEventListener('submit', function (e) {
         e.preventDefault();
-
+                      
         // create elements
-        const value = addForm.querySelector('input[type="text"]').value;
+        const value = addForm.querySelector('input[type="text"]').value+"!";
         const li = document.createElement('li');
         const bookName = document.createElement('span');
         const deleteBtn = document.createElement('span');
 
 
         //validation
-
+           
         if (value == null || value == "") {
 
             alert("write your name!");
