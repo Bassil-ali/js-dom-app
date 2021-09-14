@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
         e.preventDefault();
                       
         // create elements
-        const value = addForm.querySelector('input[type="text"]').value+"!";
+        const value = addForm.querySelector('input[type="text"]').value;
         const li = document.createElement('li');
         const bookName = document.createElement('span');
         const deleteBtn = document.createElement('span');
@@ -43,6 +43,9 @@ document.addEventListener('DOMContentLoaded', function () {
             li.appendChild(bookName);
             li.appendChild(deleteBtn);
             list.appendChild(li);
+
+            //empty after add
+            addForm.querySelector('input[type="text"]').value = "";
         }
 
     });
