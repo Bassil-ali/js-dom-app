@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
         e.preventDefault();
                       
         // create elements
-        const value = addForm.querySelector('input[type="text"]').value+"!";
+        const value = addForm.querySelector('input[type="text"]').value;
         const li = document.createElement('li');
         const bookName = document.createElement('span');
         const deleteBtn = document.createElement('span');
